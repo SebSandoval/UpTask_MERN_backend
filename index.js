@@ -32,7 +32,7 @@ const corsOptions = {
 };
 
 
-app.use(cors(corsOptions));
+app.use(cors({ origin: process.env.FRONTEND_URL }))
 //routing
 app.use('/api/usuarios', usuarioRoutes)
 app.use('/api/proyectos', proyectoRoutes)
